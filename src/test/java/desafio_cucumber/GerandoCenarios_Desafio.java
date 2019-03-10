@@ -6,8 +6,13 @@ import cucumber.api.java.en.When;
 
 public class GerandoCenarios_Desafio {
 
+	@Given("^que o ticket (especial) e  (A.\\d{3})")
+	public void queOTicketEAF(String tipo, int arg1) throws Throwable {
+
+	}
+
 	@Given("^que o ticket e AF(\\d+)$")
-	public void queOTicketAF(int arg1) throws Throwable {
+	public void queOTicketEAF(int arg1) throws Throwable {
 
 	}
 
@@ -16,13 +21,13 @@ public class GerandoCenarios_Desafio {
 
 	}
 
-	@Given("^que o nome do passageiro é \"([^\"]*)\"$")
+	@Given("^que o nome do passageiro ? \"([^\"]*)\"$")
 	public void queONomeDoPassageiro(String arg1) throws Throwable {
 
 	}
 
 	@Given("^que o telefone do passageiro é (\\d+)-(\\d+)$")
-	public void queOTelefoneDoPassageiro(int arg1, int arg2) throws Throwable {
+	public void queOTelefoneDoPassageiroE1(int arg1, int arg2) throws Throwable {
 
 	}
 
@@ -38,8 +43,8 @@ public class GerandoCenarios_Desafio {
 
 	// ---------------------- segundo cenário ---------------------------
 
-	@Given("^que o ticket (especial)? e  A.(\\d+)$")
-	public void queOTicketEAB(String tipo, int arg1) throws Throwable {
+	@Given("^que o ticket especial e AB(\\d+)$")
+	public void queOTicketEspecialEAB(int arg1) throws Throwable {
 
 	}
 
@@ -59,35 +64,35 @@ public class GerandoCenarios_Desafio {
 	}
 
 	@Given("^que o telefone do passageiro e (\\d+)-(\\d+)$")
-	public void queOTelefoneDoPassageiroE(int arg1, int arg2) throws Throwable {
+	public void queOTelefoneDoPassageiroE2(int arg1, int arg2) throws Throwable {
 
 	}
 
 	// --------------------------------- terceiro cenário---------------
 
-	@Given("^que o ticket ? CD(\\d+)$")
-	public void queOTicketCD(int arg1) throws Throwable {
+	@Given("^que o ticket e CD(\\d+)$")
+	public void queOTicketECD(int arg1) throws Throwable {
 
 	}
 
-	@Given("^que o ticket ? AG(\\d+)$")
-	public void queOTicketAG(int arg1) throws Throwable {
+	@Given("^que o ticket e AG(\\d+)$")
+	public void queOTicketEAG(int arg1) throws Throwable {
 
 	}
 
-	@Given("^que o valor da passagem ? R\\$ (\\d+)\\.(\\d+),(\\d+)$")
-	public void queOValorDaPassagemR$(int arg1, int arg2, int arg3) throws Throwable {
+	@Given("^que o valor da passagem e R\\$ (\\d+)\\.(\\d+),(\\d+)$")
+	public void queOValorDaPassagemER$(int arg1, int arg2, int arg3) throws Throwable {
 
 	}
 
-	@Given("^que o nome do passageiro ? \"([^\"]*)\"$")
-	public void queONomeDoPassageiro(String arg1) throws Throwable {
+	@Given("^que o nome do passageiro  \"([^\"]*)\"$")
+	public void queONomeDoPassageiro1(String arg1) throws Throwable {
 
 	}
 
 	@Given("^que o telefone do passageiro ? (\\d+)-(\\d+)$")
 	public void queOTelefoneDoPassageiro(int arg1, int arg2) throws Throwable {
-
+	   
 	}
 
 }
