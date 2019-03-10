@@ -1,5 +1,6 @@
 package br.com.curso_cucumber.converts;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,18 +14,15 @@ public class DateConverter extends Transformer<Date> {
 	@Override
 	public Date transform(String arg0) {
 		//Instanciando o método 
-		SimpleDateFormat DateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		java.text.DateFormat format = null;
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 		try {
 			Date retorno = format.parse(arg0);
+			return retorno;
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
+	
 	}
-
-	
-	
-	
 }

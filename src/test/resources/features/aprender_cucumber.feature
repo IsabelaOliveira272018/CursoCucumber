@@ -18,7 +18,11 @@ Feature: Aprender Cucumber
     Given que o valor do contador e 123
     When eu incrementar em 35
     Then o valor do contador sera 158
-
+		
+#		utilizando tags (elas sao uteis pois permitem colocar labels nos cenários 
+#		e no runner é possivel direcionar a execucao, ou seja
+#executando apenas quem possui o @esse ou @this
+		@this
     Scenario: Deve calcular atraso no prazo de entrega
     Given que a entrega e dia 05/04/2018
     When a entrega atrasar em 2 dias
