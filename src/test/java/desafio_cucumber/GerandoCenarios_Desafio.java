@@ -63,5 +63,31 @@ public class GerandoCenarios_Desafio {
 
 	}
 
-		
+	// --------------------------------- terceiro cenário---------------
+
+	@Given("^que o ticket ? CD(\\d+)$")
+	public void queOTicketCD(int arg1) throws Throwable {
+
+	}
+
+	@Given("^que o ticket ? AG(\\d+)$")
+	public void queOTicketAG(int arg1) throws Throwable {
+
+	}
+
+	@Given("^que o valor da passagem ? R\\$ (\\d+)\\.(\\d+),(\\d+)$")
+	public void queOValorDaPassagemR$(int arg1, int arg2, int arg3) throws Throwable {
+
+	}
+
+	@Given("^que o nome do passageiro ? \"([^\"]*)\"$")
+	public void queONomeDoPassageiro(String arg1) throws Throwable {
+
+	}
+
+	@Given("^que o telefone do passageiro ? (\\d+)-(\\d+)$")
+	public void queOTelefoneDoPassageiro(int arg1, int arg2) throws Throwable {
+
+	}
+
 }
