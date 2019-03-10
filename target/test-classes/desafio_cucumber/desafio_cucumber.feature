@@ -2,9 +2,10 @@ Feature: Desafio Cucumber
 
   Scenario: Deve criar steps genéricos para estes passos
     Given que o ticket e AF345
-    Given que o valor da passagem e R$ 230,45
-    Given que o nome do passageiro e "Fulano da Silva"
-    Given que o telefone do passageiro e 9999-9999
+    #conectivos and or but para dar mais fluidez na leitura
+    And que o valor da passagem e R$ 230,45
+    And que o nome do passageiro e "Fulano da Silva"
+    And que o telefone do passageiro e 9999-9999
     When criar os steps
     Then o teste vai funcionar
 
