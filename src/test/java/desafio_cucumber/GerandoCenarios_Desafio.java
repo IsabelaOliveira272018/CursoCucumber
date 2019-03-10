@@ -16,9 +16,9 @@ public class GerandoCenarios_Desafio {
 
 	}
 
-	@Given("^que o valor da passagem é R\\$ (\\d+),(\\d+)$")
-	public void queOValorDaPassagemR$(int arg1, int arg2) throws Throwable {
-
+	@Given("^que o valor da passagem é R\\$ (.*)$")
+	public void queOValorDaPassagemR$(Double numero) throws Throwable {
+		System.out.println(numero);
 	}
 
 	@Given("^que o nome do passageiro ? \"([^\"]*)\"$")

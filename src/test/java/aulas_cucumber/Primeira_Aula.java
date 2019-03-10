@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import cucumber.api.Transform;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -51,13 +52,11 @@ public class Primeira_Aula {
 
 	Date entrega = newDate();
 
-	@Given("^que a entrega e dia (\\d+)/(\\d+)/(\\d+)$")
-	public void queAEntregaEDia(int dia, int mes, int ano) throws Throwable {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.DAY_OF_MONTH, dia);
-		cal.set(Calendar.MONTH, mes - 1);
-		cal.set(Calendar.YEAR, ano);
-		entrega = cal.getTime();
+	@Given("^que a entrega e dia (.*)$")
+	public void queAEntregaEDia(@Transform(DateConverter.class)Date data) throws Throwable {
+		
+		entrega = data;
+		System.out.println(entrega);
 	}
 
 	private Date newDate() {
