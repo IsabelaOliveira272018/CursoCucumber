@@ -1,10 +1,10 @@
-package desafio_cucumber;
+package br.com.curso_cucumber.steps;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class GerandoCenarios_Desafio {
+public class GerandoCenarios_Desafio_Steps {
 
 	@Given("^que o ticket (especial) e  (A.\\d{3})")
 	public void queOTicketEAF(String tipo, int arg1) throws Throwable {

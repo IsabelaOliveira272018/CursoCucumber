@@ -1,10 +1,11 @@
-package aulas_cucumber;
+package br.com.curso_cucumber.steps;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import br.com.curso_cucumber.converts.DateConverter;
 import cucumber.api.Transform;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,7 +13,7 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
 @SuppressWarnings("deprecation")
-public class Primeira_Aula {
+public class Primeira_Aula_Steps {
 
 	@Given("^que criei o arquivo corretamente$")
 	public void queCrieiOArquivoCorretamente() throws Throwable {
