@@ -15,7 +15,8 @@ Feature: Desafio Cucumber
     Given que o valor da passagem e R$ 1120,23
     Given que o nome do passageiro e "Cicrano de Oliveira"
     Given que o telefone do passageiro e 9888-8888
-
+#ignorando esse cenário
+	@ignore
   Scenario: Deve negar todos os steps "Dado" dos cenários anteriores
     Given que o ticket e CD123
     Given que o ticket e AG1234

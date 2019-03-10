@@ -11,6 +11,8 @@ import cucumber.api.junit.Cucumber;
 		(
 		features = "src/test/resources/features/desafio_cucumber.feature", //mapeando as features
 		glue = "br.com.curso_cucumber.steps", //mapear os passos para que o cucumber os encontre
+		// tag usada para ignorar esse cenário e nao executar
+		tags = "~@ignore",
 		plugin = "pretty", //para ativar a saida no console
 		monochrome = true, //para formatar o texto da saida do console
 		snippets = SnippetType.CAMELCASE, // usado para formatar o texto dos metodos
