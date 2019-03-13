@@ -60,4 +60,14 @@ public class AlugarFilmeSteps {
 	public void oEstoqueDoFilmeSeraUnidade(int arg1) throws Throwable {
 	    Assert.assertEquals(arg1, filme.getEstoque());
 	}
+	
+	@Then("^nao sera possivel por falta de estoque$")
+	public void naoSeraPossivelPorFaltaDeEstoque() throws Throwable {
+	   
+	}
+
+	@Then("^o estoque do filme sera (\\d+) unidades$")
+	public void oEstoqueDoFilmeSeraUnidades(int arg1) throws Throwable {
+	    
+	}
 }

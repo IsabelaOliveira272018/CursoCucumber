@@ -5,6 +5,7 @@ import java.util.Date;
 public class NotaAluguel {
 
 	private int preco;
+	@SuppressWarnings("unused")
 	private int Date;
 
 	public int getPreco() {
