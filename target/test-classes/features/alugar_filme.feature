@@ -1,10 +1,10 @@
 Feature: Alugar Filme
 
 	Como um usuario
-	Eu quero cadastrar alugueis de filmes
+	I quero cadastrar alugueis de filmes
 	Para controlar preços e datas de entregas
 		
-	Scenario: Deve alugar um filme com sucesso cenário
+	Scenario: Deve alugar um filme com sucesso 
 	Given um filme com estoque de 2 unidades
 	And que o preco do aluguel seja 3 reais
 	When alugar

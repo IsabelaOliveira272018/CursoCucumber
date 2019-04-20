@@ -5,8 +5,8 @@ import java.util.Date;
 public class NotaAluguel {
 
 	private int preco;
-	@SuppressWarnings("unused")
-	private int Date;
+	//@SuppressWarnings("unused")
+	private Date dataEntrega;
 
 	public int getPreco() {
 		return preco;
@@ -17,11 +17,12 @@ public class NotaAluguel {
 	}
 
 	public Date getDataEntrega() {
-		java.util.Date dataEntrega = null;
+		//java.util.Date dataEntrega = null;
 		return dataEntrega;
 	}
 
 	public void setDataEntrega(Date time) {
+		@SuppressWarnings("unused")
 		java.util.Date dataEntrega = time;
 		
 	}

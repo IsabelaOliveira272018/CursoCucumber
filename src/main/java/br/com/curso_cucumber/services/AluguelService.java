@@ -8,6 +8,7 @@ import br.com.curso_cucumber.entidades.NotaAluguel;
 public class AluguelService {
 
 	public NotaAluguel alugar(Filme filme) {
+		
 		NotaAluguel nota = new NotaAluguel();
 		nota.setPreco(filme.getAluguel());
 		Calendar cal = Calendar.getInstance();

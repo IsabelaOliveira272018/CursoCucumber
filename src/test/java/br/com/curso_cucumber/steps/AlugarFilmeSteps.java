@@ -12,8 +12,8 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
 @SuppressWarnings("deprecation")
+
 public class AlugarFilmeSteps {
-	
 	
 	
 	private Filme filme;
@@ -49,7 +49,7 @@ public class AlugarFilmeSteps {
 	    Date dataRetorno = nota.getDataEntrega();
 	    Calendar calRetorno = Calendar.getInstance();
 	    calRetorno.setTime(dataRetorno);
-	    
+  
 	    Assert.assertEquals(cal.get(Calendar.DAY_OF_MONTH), calRetorno.get(Calendar.DAY_OF_MONTH));
 	    Assert.assertEquals(cal.get(Calendar.MONTH), calRetorno.get(Calendar.MONTH));
 	    Assert.assertEquals(cal.get(Calendar.YEAR), calRetorno.get(Calendar.YEAR));
