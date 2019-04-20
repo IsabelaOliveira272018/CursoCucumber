@@ -19,6 +19,7 @@ public class AlugarFilmeSteps {
 	private Filme filme;
 	private AluguelService aluguel = new AluguelService();
 	private NotaAluguel nota;
+	private String erro;
 	
 	@Given("^um filme com estoque de (\\d+) unidades$")
 	public void umFilmeComEstoqueDeUnidades(int arg1) throws Throwable {
@@ -33,7 +34,12 @@ public class AlugarFilmeSteps {
 
 	@When("^alugar$")
 	public void alugar() throws Throwable {
+		try {
 	    nota = aluguel.alugar(filme);
+		}
+		catch (RuntimeException e) {
+			erro = e.getMessage();
+		}
 	}
 
 	@Then("^o preco do aluguel sera (\\d+) reais$")
@@ -63,11 +69,12 @@ public class AlugarFilmeSteps {
 	
 	@Then("^nao sera possivel por falta de estoque$")
 	public void naoSeraPossivelPorFaltaDeEstoque() throws Throwable {
-	   
+	   Assert.assertEquals("Filme sem estoque", erro);
 	}
-
+	
 	@Then("^o estoque do filme sera (\\d+) unidades$")
 	public void oEstoqueDoFilmeSeraUnidades(int arg1) throws Throwable {
 	    
 	}
 }
+	
