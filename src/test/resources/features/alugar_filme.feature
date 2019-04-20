@@ -18,3 +18,12 @@ Feature: Alugar Filme
 	When alugar
 	Then nao sera possivel por falta de estoque
 	And o estoque do filme sera 0 unidades
+	
+	Scenario: Deve dar condicoes especiais para categoria extendida
+	Given um filme com estoque de 2 unidades 
+	And que o preco do aluguel seja 4 reais
+	And que o tipo do aluguel seja extendida
+	When alugar
+	Then o preco do aluguel sera de 8 reais 
+	And e a data de entrega sera em 3 dias
+	And a pontuacao sera de 2 pontos

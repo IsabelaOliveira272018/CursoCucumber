@@ -76,5 +76,25 @@ public class AlugarFilmeSteps {
 	public void oEstoqueDoFilmeSeraUnidades(int arg1) throws Throwable {
 	    
 	}
+	
+	@Given("^que o tipo do aluguel seja extendida$")
+	public void queOTipoDoAluguelSejaExtendida() throws Throwable {
+	   
+	}
+
+	@Then("^o preco do aluguel sera de (\\d+) reais$")
+	public void oPrecoDoAluguelSeraDeReais(int arg1) throws Throwable {
+	   
+	}
+
+	@Then("^e a data de entrega sera em (\\d+) dias$")
+	public void eADataDeEntregaSeraEmDias(int arg1) throws Throwable {
+	    
+	}
+
+	@Then("^a pontuacao sera de (\\d+) pontos$")
+	public void aPontuacaoSeraDePontos(int arg1) throws Throwable {
+	   
+	}
 }
 	
