@@ -20,6 +20,7 @@ public class AlugarFilmeSteps {
 	private AluguelService aluguel = new AluguelService();
 	private NotaAluguel nota;
 	private String erro;
+	private String tipoAluguel;
 	
 	@Given("^um filme com estoque de (\\d+) unidades$")
 	public void umFilmeComEstoqueDeUnidades(int arg1) throws Throwable {
@@ -35,7 +36,7 @@ public class AlugarFilmeSteps {
 	@When("^alugar$")
 	public void alugar() throws Throwable {
 		try {
-	    nota = aluguel.alugar(filme);
+	    nota = aluguel.alugar(filme, tipoAluguel);
 		}
 		catch (RuntimeException e) {
 			erro = e.getMessage();
@@ -79,6 +80,7 @@ public class AlugarFilmeSteps {
 	
 	@Given("^que o tipo do aluguel seja extendida$")
 	public void queOTipoDoAluguelSejaExtendida() throws Throwable {
+		tipoAluguel = "extendido";
 	   
 	}
 

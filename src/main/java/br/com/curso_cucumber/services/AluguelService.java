@@ -6,7 +6,7 @@ import br.com.curso_cucumber.utils.DateUtils;
 
 public class AluguelService {
 
-	public NotaAluguel alugar(Filme filme) {
+	public NotaAluguel alugar(Filme filme, String tipoAluguel) {
 		if (filme.getEstoque() == 0)
 			throw new RuntimeException("Filme sem estoque");
 
