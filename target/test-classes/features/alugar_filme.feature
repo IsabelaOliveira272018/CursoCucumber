@@ -5,8 +5,9 @@ Feature: Alugar Filme
 	Para controlar preços e datas de entregas
 		
 	Scenario: Deve alugar um filme com sucesso 
-	Given um filme com estoque de 2 unidades
-	And que o preco do aluguel seja 3 reais
+	Given um Filme 
+		| estoque | 2 |
+		|	preco		|	3	|
 	When alugar
 	Then o preco do aluguel sera 3 reais
 	And a data de entrega sera em 1 dia

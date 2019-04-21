@@ -4,12 +4,14 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
 
 import br.com.curso_cucumber.entidades.Filme;
 import br.com.curso_cucumber.entidades.NotaAluguel;
 import br.com.curso_cucumber.entidades.TipoAluguel;
 import br.com.curso_cucumber.services.AluguelService;
 import br.com.curso_cucumber.utils.DateUtils;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -37,6 +39,14 @@ public class AlugarFilmeSteps {
 	    filme.setAlguel(arg1);
 	}
 
+	@Given("^um filme$")
+	public void umFilme(DataTable table) throws Throwable {
+	   Map<String, String> map = table.asMap(String.class, String.class);
+	   filme = new Filme();
+	   filme.setEstoque(Integer.parseInt(map.get("estoque")));
+	   filme.setAlguel(Integer.parseInt(map.get("preco")));
+	}
+	
 	@When("^alugar$")
 	public void alugar() throws Throwable {
 		try {
