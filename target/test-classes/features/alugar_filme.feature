@@ -43,7 +43,6 @@ Examples:
 	| 4     | extendido | 8     |   3     |   2       |
 	| 4			| comum 		| 4			|   1			|   1				|
 	
-	
 	#Scenario: Deve dar condicoes especiais para categoria comum
 	#Given um filme com estoque de 2 unidades 
 	#And que o preco do aluguel seja 4 reais

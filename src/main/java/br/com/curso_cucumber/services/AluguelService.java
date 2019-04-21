@@ -15,8 +15,11 @@ public class AluguelService {
 			nota.setPreco(filme.getAluguel() * 2);
 			nota.setDataEntrega(DateUtils.obterDataDiferencaDias(3));
 			nota.setPontuacao(2);
-		}
-		else {
+		} else if ("semanal".equals(tipoAluguel)) {
+			nota.setPreco(filme.getAluguel() * 3);
+			nota.setDataEntrega(DateUtils.obterDataDiferencaDias(7));
+			nota.setPontuacao(3);
+		} else {
 			nota.setPreco(filme.getAluguel());
 			nota.setDataEntrega(DateUtils.obterDataDiferencaDias(1));
 			nota.setPontuacao(1);
