@@ -20,6 +20,6 @@ import cucumber.api.junit.Cucumber;
 		dryRun = false, //usado para validar os testes
 		strict = false // para identificar passos no cenario
 		)
-public class Runner {
+public class RunnerTest {
 
 }
